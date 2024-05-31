@@ -657,12 +657,56 @@ There are a number of errors:
 - FileNotFoundError
 - KeyError
 -IndexError
+### Catching Exceptions
+1) try: - something that might cause an exception
+2) except: - Do this if there was an exception
+3) else: - Do this if there was NO exception (success)
+4) finally: - Do this no matter what happens
+It is a convention to specify an exception we want to catch:
+```ruby
+except FileNotFoundError:
+```
+Getting error message:
+```ruby
+except KeyError as error_message:
+    print(f"The key {error_message} doesn't exist")
+```
+Raising exceptions:
+```ruby
+raise KeyError("This is an error i made up"):
+```
+### JSON
+```ruby
+import json
 
-###Catching Exceptions
-
-###JSON
+json.dump() #write
+json.load() #read
+json.update() #update
+```
 Writing:
-
+```ruby
+new_data = {
+    website:{
+        "email":email,
+        "password":password,
+    }
+}
+with open ("data.json", "w") as file:
+    json.dump(new_data, file, indent=4)
+````
 Reading:
-
+```ruby
+with open ("data.json", "r") as file:
+    data = json.load(file)
+````
 Updating:
+```ruby
+with open ("data.json", "r") as file:
+    #Reading old data
+    data = json.load(file)
+    #Updating old data with new data
+    data.update(new_data)
+with open ("data.json", "w") as file:
+    #Saving updated data
+    json.dump(new_data, file, indent=4)
+````
