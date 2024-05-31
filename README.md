@@ -653,3 +653,16 @@ letters = ["c", "s", "k", "a"]
 club = "".join(letters) #returns a string object
 ```
 ## ***Day 30. Errors, Exceptions and JSON Data.***
+There are a number of errors:
+- FileNotFoundError
+- KeyError
+-IndexError
+
+###Catching Exceptions
+
+###JSON
+Writing:
+
+Reading:
+
+Updating:
