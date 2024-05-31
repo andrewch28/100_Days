@@ -652,4 +652,4 @@ email = email_entry.get()
 letters = ["c", "s", "k", "a"]
 club = "".join(letters) #returns a string object
 ```
-## ***Day 30. .***
+## ***Day 30. Errors, Exceptions and JSON Data.***
