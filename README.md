@@ -711,9 +711,11 @@ with open ("data.json", "w") as file:
     json.dump(new_data, file, indent=4)
 ```
 ## ***Day 31. Capstone Project. Flashy cards***
-```
+```ruby
 to_learn = df.to_dict(orient="records")
+
 #Creates a list of dictionary whre each dictinoary consists out of column name : value pairs)
 #[{'French':'partie', 'English':'part'}, {...}, {...}]
 ```
 The whole day was about creating the project, so to properly revise it, the best option is to head over to the code of the project itself
+## ***Day 32. .***
