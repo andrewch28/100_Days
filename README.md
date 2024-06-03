@@ -776,3 +776,38 @@ to_learn = df.to_dict(orient="records")
 ### Reading a file
 Notice that ```readlines()``` returns every line as an element of the list,<br >
 while ```read()``` reads the file as it is and you then can print it out the same way as it is stored in the file
+## ***Day 33. API Endpoints and API Parametes. ISS Overhead Notifier.***
+API Endpoint - where we get the data from. For example - api.coinbase.com
+
+API Parameters - to control which info we will get back from the endpoint
+
+Types of responces:
+- 1xx - Hold on
+- 2xx - Here is your info
+- 3xx - Go away (no access)
+- 4xx - You screwed up (page doesn't exist)
+- 5xx - I screwed up (server)
+
+API request
+```ruby
+import requests
+
+#we get the info from endpoint
+response = requests.get(url="http://api.open-notify.org/iss-now.json")
+#To handle all the failed requests
+response.raise_for_status()
+#Convert data into a python dict, which we can then use as usual
+data = response.json()
+```
+API request with params
+```ruby
+parameters = {
+    "lat": MY_LAT,
+    "lng": MY_LNG,
+    "formatted": 0,
+}
+
+response = requests.get(url=" https://api.sunrise-sunset.org/json", params=parameters)
+response.raise_for_status()
+data = response.json()
+```
