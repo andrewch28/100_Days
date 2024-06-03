@@ -711,11 +711,68 @@ with open ("data.json", "w") as file:
     json.dump(new_data, file, indent=4)
 ```
 ## ***Day 31. Capstone Project. Flashy cards***
+### iterrows( )
 ```ruby
 to_learn = df.to_dict(orient="records")
 
-#Creates a list of dictionary whre each dictinoary consists out of column name : value pairs)
+#Creates a list of dictionary where each row is a dictinoary which consists out of column name : value pairs)
 #[{'French':'partie', 'English':'part'}, {...}, {...}]
+#[{'name': 'Art', 'email': 'andrewch2817@gmail.com', 'year': 1961, 'month': 6, 'day': 3},
+# {'name': 'Kate', 'email': 'andrewch2817@gmail.com', 'year': 1961, 'month': 7, 'day': 3}]
 ```
 The whole day was about creating the project, so to properly revise it, the best option is to head over to the code of the project itself
-## ***Day 32. .***
+## ***Day 32. Send Email(smtplib) and Manage Dates (datetime).***
+### smtplib
+```ruby
+import smptlib #module for sending emails
+```
+Example:
+```ruby
+with smtplib.SMTP("smtp.gmail.com") as connection:
+    connection.starttls() #ensuring secure connection 
+    connection.login(user=USERNAME, password=PASSWORD)
+    connection.sendmail(from_addr=USERNAME,
+                        to_addrs=USERNAME,
+                        msg=f"Subject: Happy birthday!\n\nHave a nice day!")
+                        #we first specify a subject, then the text of the message
+```
+### datetime
+```ruby
+import datetime
+```
+```ruby
+now = datetime.datetime.now()
+
+#datetime is a module where there is a class also called datetime, which has method now, which returns current date
+```
+```ruby
+now = datetime.datetime.now()
+year = now.year #year attribute to return the year from the date
+```
+There are other attributes like ```.month```, ```.day```
+
+There is also a method to return the day of the week (in numeric value from 0 to 6)
+```ruby
+day_of_week = now.weekday()
+```
+Creating a datetime object:
+```ruby
+date_of_birth = datetime.datetime(year=2003, month=10, day=28)
+```
+
+!Notice replace doesn't change the original variable, therefore if you want to save the replacement you have to save the result in another variable
+```ruby
+text = text.replace("[NAME]", birthdays[current_day]["name"])
+```
+### iterrows( ) and dictionary comprehension
+```ruby
+to_learn = df.to_dict(orient="records")
+
+#Creates a list of dictionary where each row is a dictinoary which consists out of column name : value pairs)
+#[{'French':'partie', 'English':'part'}, {...}, {...}]
+#[{'name': 'Art', 'email': 'andrewch2817@gmail.com', 'year': 1961, 'month': 6, 'day': 3},
+#{'name': 'Kate', 'email': 'andrewch2817@gmail.com', 'year': 1961, 'month': 7, 'day': 3}]
+```
+### Reading a file
+Notice that ```readlines()``` returns every line as an element of the list,<br >
+while ```read()``` reads the file as it is and you then can print it out the same way as it is stored in the file
