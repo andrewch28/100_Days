@@ -631,7 +631,7 @@ math.ceil(5,1) = 6
 ## ***Day 29. Building a password Manager GUI App with Tkinter.***
 ```py
 b = Label(...)
-b.grid(row=2, column=0, columnspam=2) #columnspan represents how many columns will the label take - in this case it will take 2 columns = column number 0 and column number 1
+b.grid(row=2, column=0, columnspan=2) #columnspan represents how many columns will the label take - in this case it will take 2 columns = column number 0 and column number 1
 ```
 To keep the coursor inside the entry widget by default:
 ```py
