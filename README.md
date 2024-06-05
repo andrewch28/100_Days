@@ -64,7 +64,7 @@ def my_function(something)
 ```
 In this case **something** is a parameter and **123** is an argument.<br />
 
-There are two types of arguments: keyword arguments and positional arguments. The last ones' are not specified in any way and are assigned depending on their order (like 123). Keyword arguments are clearly specified like **my_function(something = 123)**.
+There are two types of arguments: ***keyword arguments*** and ***positional arguments***. The last ones' are not specified in any way and are assigned depending on their order (like 123). Keyword arguments are clearly specified like **my_function(something = 123)**.
 
 11. Math library:
 ```py
@@ -811,3 +811,51 @@ response = requests.get(url=" https://api.sunrise-sunset.org/json", params=param
 response.raise_for_status()
 data = response.json()
 ```
+## ***Day 34. The Trivia API and The Quizzler App.***
+Here is an example of an URL:
+```py
+"https://opentdb.com/api.php?amount=10&category=9&type=boolean"
+```
+Everything before ? is an endpoint and everything after are various parameters, so here if we wanted to open this API it would look smth like this: 
+```py
+import requests
+
+parameters = {
+    "amount": 10,
+    "category": 9,
+    "type": "boolean",
+}
+
+response = requests.get(url="https://opentdb.com/api.php", params=parameters)
+response.raise_for_status()
+data = response.json()["results"]
+```
+If we executed the above written code we will face HTML enteties - certain characters from our JSON which are replaced with cerain HTML code. To fix this:
+```py
+import html
+
+new_text = html.unescape(old_text)
+```
+Remeber that the name of the class should be written in PascalCode
+
+We can add padding into the Canvas through the grid
+
+```self.``` turns item into a property, which can be accessed anywhere in a class, if we now that we won't have to use it further, we can ignore writing ```self.```
+
+### Type hints
+We can define the type of the variable and then latter assign a value to it:
+```py
+age: int
+
+age = 12 #we will see a warning if we try to give it a str
+```
+The same can be applied to functions:
+```py
+#Here we use age: int to specify that we have a parameter which is an int
+def police_check(age: int) -> bool:  # -> bool means that the reutrn value of a function is going to be a boolean
+    if age > 18:
+        return True
+    else:
+        return False
+```
+This is simply a nice way to remind yourself about types used in the function if it is far below in the code or have not been used for a while
