@@ -7,30 +7,30 @@ alt + shift (ability to change a number of nearest lines at the same time)
 ## ***Day 1 - Day 11:***
 
 1. Escape character:
-```ruby
+```py
 \
 ```
 2. Starting a new line:
-```ruby
+```py
 \n
 ```
 3. Addidng two decimal digits:
-```ruby
+```py
 "{:.2f}".format(bill)
 ```
 4. Counting a character:
-```ruby
+```py
 name = turtle
 counter = name.count('t')
 ```
 5. Random library:
-```ruby
+```py
 import random
 random.random()  #returns a float between 0 and 1
 random.randint(1,10) #random integer between 1 and 10, including 10
 ```
 6. List:
-```ruby
+```py
 fruits = ['apple', 'peach']
 fruits.append('strawberry')
 fruits.extend(['banana', 'orange'])
@@ -38,12 +38,12 @@ fruits.extend(['banana', 'orange'])
 fruits.index('banana')
 ```
 7. Rounding:
-```ruby
+```py
 int(163,7) = 163
 round(163,7) = 164
 ```
 8. Trick for getting indexes:
-```ruby
+```py
 word = 'camel'
 guess_letter = 'c'
 for position in range(len(word)):
@@ -51,13 +51,13 @@ for position in range(len(word)):
         print('Correct!')
 ```
 9. Join
-```ruby
+```py
 display = ['a', 'b', 'c']
 connect = " ".join(display)
 ```
 
 10. Functions
-```ruby
+```py
 def my_function(something)
 ...
     my_function(123)
@@ -67,18 +67,18 @@ In this case **something** is a parameter and **123** is an argument.<br />
 There are two types of arguments: keyword arguments and positional arguments. The last ones' are not specified in any way and are assigned depending on their order (like 123). Keyword arguments are clearly specified like **my_function(something = 123)**.
 
 11. Math library:
-```ruby
+```py
 import math
 math.ceil(3,1) = 4  #rounds float to the next integer (not the closest)
 ```
 12. Don't forget
-```ruby
+```py
 shift_amount *= -1
 ```
 13. Don't forget 2
 
 By convention we should use this syntax:
-```ruby
+```py
 for _ in range(3):
     print('Hey!')
     #remember that range DOESN'T include the last number
@@ -86,7 +86,7 @@ for _ in range(3):
 ```
 
 14. Remove:
-```ruby
+```py
 list.remove('apple')
 ```
 ## ***Day 12. Scope.***
@@ -94,7 +94,7 @@ list.remove('apple')
 <br />
 If a variable is defined outside the function it is then called a **global** variable or function, which means that it can be accessed from anywhere.<br />
 To change global variable inside a local function:
-```ruby
+```py
 enemies = 1
 def function():
     global enemies
@@ -104,7 +104,7 @@ Now the global value of enemies is 2<br />
 
 Convention regarding **Constant:**<br />
 If you want to show that the variable is a constant and shoud not be changed, you should use uppercase:
-```ruby
+```py
 PI = 3.1459
 ```
 
@@ -132,7 +132,7 @@ In OOP we have a so-called **Class**, which is basically a blueprint for a certa
 Let's assume that we have a class called CarBlueprint (notice that the name of a class must always be capitalized - this is a PascalCase).<br />
 <br />
 We can create an object from this blueprint with a following syntax:
-```ruby
+```py
 car = CarBlueprint()  #car is an object, that has certain attributes and methods
 
 car.speed #this is how we access an attribute (variable) speed, which is available for this class
@@ -143,7 +143,7 @@ car.stop() #and this is how we can access a method of this object
 To search for various packages visit **pypi.org** or rewatch Lecture 149.
 ## ***Day 17. The Quiz Project & the benefits of OOP.***
 To create a **class** we use:
-```ruby
+```py
 class User:
     pass
 
@@ -156,14 +156,14 @@ Remember that an attribute is basically a variable that is associated with an ob
 How can I specify all these attributes, when I create my object from the **class**?<br />
 **Attributes:**
 
-```ruby
+```py
 class Car:
     def __init__(self):
     #to initialise attributes
 
     #__init__ function is going to be automatically called any time you create a new object from this class
 ```
-```ruby
+```py
 class Car:               #we pass seats value as a parameter
     def __init__(self, seats):
         self.seats = seats #--- seats is a value to which attribute is equal to
@@ -173,7 +173,7 @@ class Car:               #we pass seats value as a parameter
 #self is a name of an object
 ```
 To set certain attribute's values by default we use this syntax:
-```ruby
+```py
 class Car():
     def __init__(self):
         self.speed = 0
@@ -183,7 +183,7 @@ class Car():
 We create a class called Car and then initialize object my_car with 5 seats in it by passing an argument 5 inside a Class function.<br />
 Then we use a function called enter_race_mode() on an object my_car which is supposed to change the number of seats to two, which is exactly what is going to happen after we execute this code.
 
-```ruby
+```py
 class Car:
     def __init__(self, seats):
         self.seats = seats
@@ -203,28 +203,28 @@ If we want to change the way our code is distributed over the page we should go 
 **Ways to import a module:**<br >
 
 First option:
-```ruby
+```py
 import turtle
 timmy = turtle.Turtle()
 ```
 Second option (best one):
-```ruby
+```py
 from turtle import Turtle
 timmy = Turtle()
 ```
 Third option (not recommended):
-```ruby
+```py
 from turtle import *  #imports everything from the module at once
 timmy = Turtle()
 ```
 Fourth option (aliases):
-```ruby
+```py
 import turtle as t
 timmy = t.Turtle()
 ```
 
 **Tuples:**
-```ruby
+```py
 my_tuple = (1, 3, 8) #the key difference comparing with lists is that tuples are immutable
 
 #If you nevertheless want to modify it, you shall convert it into a list:
@@ -239,7 +239,7 @@ After passing the function to another function, we can use the passed fucntion i
 # THINK ABOUT ADDING AN EXAMPLE OF A HIGHER OREDER FUNCTION
 **instances and state:**<br >
 All objects are instances of classes, and conversely, all instances of classes are objects. To create an object from a class means to instantiate it. We are creating an instance of the class Turtle. However each instance may have different features, while the object is simply their common characteristic.
-```ruby
+```py
 timmy = Turtle()
 timme.color = green #the state of timmy's color attribute is green
 ```
@@ -250,12 +250,12 @@ Everything we write under ```def __init__(self):``` will be automatically execut
 The idea is that one class is able to inherit all the attributes and methods of the over one:
 
 We have a class called Fish
-```ruby
+```py
 class Fish:
     def __init__(self):
 ```
 In order to get this fish class to inherit from Animal class:
-```ruby
+```py
 class Fish (Animal): #in ( ) we specify the class from which we want to inherit
     def __init__(self):
         super().__init__() # allows us to get all the attributes and methods of an Animal Class
@@ -264,7 +264,7 @@ class Fish (Animal): #in ( ) we specify the class from which we want to inherit
 In this case Fish is called ***subclass*** and Animal is ***superclass***.
 
 More complicated example:
-```ruby
+```py
 class Animal:
     def __init__(self):
         self.num_eyes = 2
@@ -292,17 +292,17 @@ Rewatch Lecture 218 from time to time.
 ## ***Day 24. File, Directories and Paths.***
 Some syntax for FILE I/O
 
-```ruby
+```py
 file = open("my_file.txt")
 contents = file.read()
 file.close()
 ```
 
-```ruby
+```py
 with open("my_file.txt") as file:
     contents = file.read()
 ```
-```ruby
+```py
 with open("my_file.txt", "w") as file:
     file.write("Hello, there!")
 ```
@@ -329,7 +329,7 @@ removes spaces at the beginning and at the end of the string
 ## ***Day 25. Working with CSV Data and the Pandas library.***
 
 ### CSV, reader
-```ruby
+```py
 import csv
 
 with open("weather_data.csv") as file:
@@ -338,7 +338,7 @@ with open("weather_data.csv") as file:
 ```
 
 ### Pandas
-```ruby
+```py
 import pandas as pd
 df = pd.read_csv(" ")
 print(df['temp'])
@@ -347,22 +347,22 @@ There are two types of data in pandas: **DataFrame and Series**
 
 A **DataFrame** is a data structure such as our weather_date, which contains multiple columns. However if we select one column from the DataFrame: ```df['temp']``` it's type is going to be **Series**.
 
-```ruby
+```py
 print(type(df)) #this is a DataFrame
 print(type(df['temp'])) #this is a Series
 ```
 
 Some methods for pandas Series:
-```ruby
+```py
 s.to_csv("filename.csv") #to convert df into a csv
 ```
-```ruby
+```py
 s.to_dict() #to convert df into a dictionary
 ```
-```ruby
+```py
 s.to_list() #to convert df into a list
 ```
-```ruby
+```py
 s.mean()
 ```
 
@@ -380,7 +380,7 @@ Getting data in rows:
 
 
 Creating df from scratch:
-```ruby
+```py
 data_dict = {
     'students' : [ ],
     'scores' : [ ],
@@ -434,7 +434,7 @@ Example:
 2. We want to get students and their score printed out for those who got more than 60. ```passed_students = {student:score for (student, score) in students_scores.items() if score > 60}```
 
 ### How to iterate over Pandas DataFrame
-```ruby
+```py
 for (index, row) in student_data_frame.iterrows():
     print(row)  #each row is a pandas Series object, which means we can tap into the row by printing
     print(row.student)
@@ -446,7 +446,7 @@ Until now we knew only positional and keyword arguments
 
 ### Advance arguments
 **1. Arguments with default values**
-```ruby
+```py
 def my_function(a=1, b=2, c=3)
     ...
 my_function() #we can call function with no arg, cause they become optional once we have set a default value for them
@@ -455,7 +455,7 @@ my_function() #we can call function with no arg, cause they become optional once
 If we have a default atguments it makes it optional and we don't have to specify it when calling the function and thosee which do not have any default values are required to be specified.
 
 **2. Unlimited Positional Arguments - ```*args```**
-```ruby
+```py
 def add(*args) #the funstion accepts any number of arguments
     for n in args:
         print(n)
@@ -463,7 +463,7 @@ def add(*args) #the funstion accepts any number of arguments
 add(2, 5, 6, 7)
 ```
 ```(*args)``` collect all the argumnets into a tuple:
-```ruby
+```py
 def add(*args)
     print(args) #this will return a tuple of arguments
 
@@ -474,7 +474,7 @@ def add(*args)
 
 The difference with *args is that in this casee arguments are keyworded and the fact that ```*args``` returns a tuple and ```**kwargs``` return a dictionary
 
-```ruby
+```py
 def calculate(**kwargs):
     print(kwargs) #print dictionary where key is the name of the argument and the value is it's value
 
@@ -485,7 +485,7 @@ calculate(add=3, multiply=5)
 ```
 
 Classes
-```ruby
+```py
 class Car:
 
     def __init__(self, **kw):
@@ -498,7 +498,7 @@ my_car = Car(make='Nissan', model='Skyline')
 However if dont's specify any of the arguments we wll get an error, to avoid this we should use another approach:
 
 It works the same, however if there are no arguments ```get()``` is goint to return 0
-```ruby
+```py
 class Car:
 
     def __init__(self, **kwargs):
@@ -509,7 +509,7 @@ my_car = Car(make='Nissan', model='Skyline')
 ```
 
 ### Tkinter
-```ruby
+```py
 from tkinter import *
 
 #Creating a new window and configurations
@@ -611,7 +611,7 @@ window.mainloop()
 
 ### Canvas widget
 
-```ruby
+```py
 canvas = Canvas(width = 200, height = 224)
 tomato_img = PhotoImage(file = "tomato.png") # to convert png into img
 canvas.create_image(100, 112, image = tomato_img)
@@ -620,7 +620,7 @@ canvas.pack() #or other layout manager
 
 ### math module
 
-```ruby
+```py
 import math
 
 math.floor(5,7) = 5 #The math.floor() method rounds a number DOWN to the nearest integer and returns the result.
@@ -629,26 +629,26 @@ math.floor(5,7) = 5 #The math.floor() method rounds a number DOWN to the nearest
 math.ceil(5,1) = 6
 ```
 ## ***Day 29. Building a password Manager GUI App with Tkinter.***
-```ruby
+```py
 b = Label(...)
 b.grid(row=2, column=0, columnspam=2) #columnspan represents how many columns will the label take - in this case it will take 2 columns = column number 0 and column number 1
 ```
 To keep the coursor inside the entry widget by default:
-```ruby
+```py
 website_entry.focus()
 ```
 To set a default value at the entry widget:
-```ruby
+```py
 email_entry.insert(0, "email") # at the beginning
 email_entry.insert(END, "email") # at the end
 ```
 To get value from the entry widget:
-```ruby
+```py
 email = email_entry.get()
 #email stores the value which was inserted in the entry widget
 ```
 
-```ruby
+```py
 letters = ["c", "s", "k", "a"]
 club = "".join(letters) #returns a string object
 ```
@@ -663,20 +663,20 @@ There are a number of errors:
 3) else: - Do this if there was NO exception (success)
 4) finally: - Do this no matter what happens
 It is a convention to specify an exception we want to catch:
-```ruby
+```py
 except FileNotFoundError:
 ```
 Getting error message:
-```ruby
+```py
 except KeyError as error_message:
     print(f"The key {error_message} doesn't exist")
 ```
 Raising exceptions:
-```ruby
+```py
 raise KeyError("This is an error i made up"):
 ```
 ### JSON
-```ruby
+```py
 import json
 
 json.dump() #write
@@ -684,7 +684,7 @@ json.load() #read
 json.update() #update
 ```
 Writing:
-```ruby
+```py
 new_data = {
     website:{
         "email":email,
@@ -695,12 +695,12 @@ with open ("data.json", "w") as file:
     json.dump(new_data, file, indent=4)
 ````
 Reading:
-```ruby
+```py
 with open ("data.json", "r") as file:
     data = json.load(file)
 ````
 Updating:
-```ruby
+```py
 with open ("data.json", "r") as file:
     #Reading old data
     data = json.load(file)
@@ -712,7 +712,7 @@ with open ("data.json", "w") as file:
 ```
 ## ***Day 31. Capstone Project. Flashy cards***
 ### iterrows( )
-```ruby
+```py
 to_learn = df.to_dict(orient="records")
 
 #Creates a list of dictionary where each row is a dictinoary which consists out of column name : value pairs)
@@ -723,11 +723,11 @@ to_learn = df.to_dict(orient="records")
 The whole day was about creating the project, so to properly revise it, the best option is to head over to the code of the project itself
 ## ***Day 32. Send Email(smtplib) and Manage Dates (datetime).***
 ### smtplib
-```ruby
+```py
 import smptlib #module for sending emails
 ```
 Example:
-```ruby
+```py
 with smtplib.SMTP("smtp.gmail.com") as connection:
     connection.starttls() #ensuring secure connection 
     connection.login(user=USERNAME, password=PASSWORD)
@@ -737,35 +737,35 @@ with smtplib.SMTP("smtp.gmail.com") as connection:
                         #we first specify a subject, then the text of the message
 ```
 ### datetime
-```ruby
+```py
 import datetime
 ```
-```ruby
+```py
 now = datetime.datetime.now()
 
 #datetime is a module where there is a class also called datetime, which has method now, which returns current date
 ```
-```ruby
+```py
 now = datetime.datetime.now()
 year = now.year #year attribute to return the year from the date
 ```
 There are other attributes like ```.month```, ```.day```
 
 There is also a method to return the day of the week (in numeric value from 0 to 6)
-```ruby
+```py
 day_of_week = now.weekday()
 ```
 Creating a datetime object:
-```ruby
+```py
 date_of_birth = datetime.datetime(year=2003, month=10, day=28)
 ```
 
 !Notice replace doesn't change the original variable, therefore if you want to save the replacement you have to save the result in another variable
-```ruby
+```py
 text = text.replace("[NAME]", birthdays[current_day]["name"])
 ```
 ### iterrows( ) and dictionary comprehension
-```ruby
+```py
 to_learn = df.to_dict(orient="records")
 
 #Creates a list of dictionary where each row is a dictinoary which consists out of column name : value pairs)
@@ -789,7 +789,7 @@ Types of responces:
 - 5xx - I screwed up (server)
 
 API request
-```ruby
+```py
 import requests
 
 #we get the info from endpoint
@@ -800,7 +800,7 @@ response.raise_for_status()
 data = response.json()
 ```
 API request with params
-```ruby
+```py
 parameters = {
     "lat": MY_LAT,
     "lng": MY_LNG,
