@@ -1,4 +1,4 @@
-# ***100 Days of Python - Insights.*** 
+# ***100 Days of Python - Insights.*** Hopefully this will work
 ## ***Keyboard Shortcuts***
 ctrl + /    (make everything a comment # or turn it to code from #)<br />
 ctrl + z    (undo)<br />
