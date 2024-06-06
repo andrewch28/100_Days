@@ -1,4 +1,4 @@
-# ***100 Days of Python - Insights.*** Love
+# ***100 Days of Python - Insights.***
 ## ***Keyboard Shortcuts***
 ctrl + /    (make everything a comment # or turn it to code from #)<br />
 ctrl + z    (undo)<br />
@@ -859,3 +859,4 @@ def police_check(age: int) -> bool:  # -> bool means that the reutrn value of a 
         return False
 ```
 This is simply a nice way to remind yourself about types used in the function if it is far below in the code or have not been used for a while
+## ***Day 35. .***
