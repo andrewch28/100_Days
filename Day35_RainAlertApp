@@ -1,0 +1,32 @@
+import requests
+from twilio.rest import Client
+
+api_key = "api_key"
+endpoint = "https://api.openweathermap.org/data/2.5/forecast"
+parameters = {
+    "lat": 55.751244,
+    "lon": 37.618423,
+    "appid": api_key,
+    "cnt": 4,
+}
+account_sid = "checktwilio"
+account_token = "checktwilio"
+
+response = requests.get(url=endpoint, params=parameters)
+response.raise_for_status()
+weather_data = response.json()
+
+will_rain = False
+for item in weather_data['list']:
+    if item["weather"][0]["id"] < 700:
+        will_rain = True
+if will_rain:
+    client = Client(account_sid, account_token)
+
+    message = client.messages \
+        .create(
+            body="Take an umbrella!",
+            from_='+number',
+            to='+number'
+        )
+    print(message.status)
