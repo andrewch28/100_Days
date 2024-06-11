@@ -439,7 +439,7 @@ for (index, row) in student_data_frame.iterrows():
     print(row)  #each row is a pandas Series object, which means we can tap into the row by printing
     print(row.student)
 ```
-# REVISE ITTEROWS()
+
 ## ***Day 27.GUI with Tkinter and Function argumnets.***
 
 Until now we knew only positional and keyword arguments
@@ -481,7 +481,7 @@ def calculate(**kwargs):
 calculate(add=3, multiply=5)
 
 #result is:
-    {'add':3, 'multiply':5}
+{'add':3, 'multiply':5}
 ```
 
 Classes
@@ -495,7 +495,7 @@ class Car:
 my_car = Car(make='Nissan', model='Skyline')
 ```
 
-However if dont's specify any of the arguments we wll get an error, to avoid this we should use another approach:
+However if don't specify any of the arguments we wll get an error, to avoid this we should use another approach:
 
 It works the same, however if there are no arguments ```get()``` is goint to return 0
 ```py
@@ -720,7 +720,7 @@ to_learn = df.to_dict(orient="records")
 #[{'name': 'Art', 'email': 'andrewch2817@gmail.com', 'year': 1961, 'month': 6, 'day': 3},
 # {'name': 'Kate', 'email': 'andrewch2817@gmail.com', 'year': 1961, 'month': 7, 'day': 3}]
 ```
-The whole day was about creating the project, so to properly revise it, the best option is to head over to the code of the project itself
+The whole day was about creating the project, so to properly revise it, the best option is to head over to the code of the project itself.
 ## ***Day 32. Send Email(smtplib) and Manage Dates (datetime).***
 ### smtplib
 ```py
@@ -859,4 +859,5 @@ def police_check(age: int) -> bool:  # -> bool means that the reutrn value of a 
         return False
 ```
 This is simply a nice way to remind yourself about types used in the function if it is far below in the code or have not been used for a while
-## ***Day 35. .***
+## ***Day 35. API Keys, Authentication, Environment Variables and Sending SMS.***
+It was rather a strange day, we have mostly interacted with Openweathermap API and twilio API. As for the code - we haven't written much - so simply check out the project, if curious to find out more. To be honest this was rather a strange day, so maybe it is reasonable to skip and forget about it.
