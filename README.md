@@ -1,4 +1,4 @@
-# ***100 Days of Python - Insights.*** Hopefully this will work
+# ***100 Days of Python - Insights.***
 ## ***Keyboard Shortcuts***
 ctrl + /    (make everything a comment # or turn it to code from #)<br />
 ctrl + z    (undo)<br />
@@ -360,7 +360,7 @@ s.to_csv("filename.csv") #to convert df into a csv
 s.to_dict() #to convert df into a dictionary
 ```
 ```py
-s.to_list() #to convert df into a list
+s.to_list() #to convert Series into a list
 ```
 ```py
 s.mean()
