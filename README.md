@@ -861,3 +861,10 @@ def police_check(age: int) -> bool:  # -> bool means that the reutrn value of a 
 This is simply a nice way to remind yourself about types used in the function if it is far below in the code or have not been used for a while
 ## ***Day 35. API Keys, Authentication, Environment Variables and Sending SMS.***
 It was rather a strange day, we have mostly interacted with Openweathermap API and twilio API. As for the code - we haven't written much - so simply check out the project, if curious to find out more. To be honest this was rather a strange day, so maybe it is reasonable to skip and forget about it.
+## ***Day 36. Stock Trading News Alert Project.***
+Once again it was all about the API, so nothing new except for maybe ```abs()``` function:
+```py
+difference = abs(5-7)
+#The result is going to be 2
+```
+## ***Day 37. Habit Tracking Project: API Post Requets & Headers.***
