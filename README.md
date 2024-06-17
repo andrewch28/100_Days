@@ -868,3 +868,27 @@ difference = abs(5-7)
 #The result is going to be 2
 ```
 ## ***Day 37. Habit Tracking Project: API Post Requets & Headers.***
+
+## requests module
+We have already used ```requests.get()``` to get a piece of data from smbd else. Now we are going to introduce other types of requests:
+- ```request.get()```
+- ```request.post()```  (sending data)
+- ```request.put()```   (sending updated data)
+- ```request.delete()```  (sending deletion request)
+
+***Post request*** is when WE GIVE an external system some piece of data.
+
+During this day we have used Pixela API: https://pixe.la/
+
+## datetime module
+
+```py
+from datetime import datetime
+
+today = datetime.now()
+today.strftime("%Y%m%d") #to convert time into a string like 20240617
+```
+To create a date:
+```py
+day = datetime(year= 2024, month = 6, day = 17)
+```
