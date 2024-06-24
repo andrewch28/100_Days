@@ -895,6 +895,9 @@ day = datetime(year= 2024, month = 6, day = 17)
 ## ***Day 38. Workout Tracking Using Google sheets.***
 Nothing new here, just a project
 
+## ***Day 39. TODO.***
+
+## ***Day 40. TODO.***
 
 ## ***Day 41. Web Foundation - Introduction to HTML.***
 ***HTML*** - **H**yper**T**ext **M**arkup **L**anguage
