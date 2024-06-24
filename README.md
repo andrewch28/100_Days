@@ -894,3 +894,23 @@ day = datetime(year= 2024, month = 6, day = 17)
 ```
 ## ***Day 38. Workout Tracking Using Google sheets.***
 Nothing new here, just a project
+
+
+## ***Day 41. Web Foundation - Introduction to HTML.***
+***HTML*** - **H**yper**T**ext **M**arkup **L**anguage
+### The heading Elements
+```html
+<h1>Hello World</h1>
+```
+The tag refers to the ```<h1>``` and ```</h1>```(opening and closing tag respectively).
+
+Element is the whole line of code given above (both tags and text between them).
+
+It is a bad practice to use more than one h1 headings. If you have h3, you should have already used h2.
+
+Documentation on various tags: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
+
+### Paragraph Elements
+```html
+<p>This is a new paragraph</p>
+```
