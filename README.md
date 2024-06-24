@@ -914,3 +914,19 @@ Documentation on various tags: https://developer.mozilla.org/en-US/docs/Web/HTML
 ```html
 <p>This is a new paragraph</p>
 ```
+
+### Self Closing Tags (Void Elements)
+```html
+<hr /> //creates a line
+```
+Exapmle:
+
+Paragraph 1
+<hr />
+Paragraph 2
+<hr />
+<br />
+
+```html
+<br /> //breaks sentence into diffrent lines
+```
