@@ -984,3 +984,52 @@ This is how it actually looks
     <li>Eggs</li>
     <li>Flour</li>
 </ol>
+
+### Nesting and Indentation
+The main idea is that even though identation is not essential for the code to work, it is yet crucial for the readability
+```html
+<ul>
+    <li>¾ cup warm milk</li>
+    <li>2 ¼ teaspoons yeast </li>
+        <ul>
+            <li>¼ cup granulated sugar</li>
+            <li>1 egg plus 1 egg yolk</li>
+        <ul>
+    <li>¼ cup butter</li>
+    <li>3 cups bread flour</li>
+</ul>
+```
+This is how it looks like
+<ul>
+    <li>¾ cup warm milk</li>
+    <li>2 ¼ teaspoons yeast </li>
+        <ul>
+            <li>¼ cup granulated sugar</li>
+            <li>1 egg plus 1 egg yolk</li>
+        </ul>
+    <li>¼ cup butter</li>
+    <li>3 cups bread flour</li>
+</ul>
+
+### Anchor Elements
+```html
+<a href="https://www.harvard.edu/">This is link</a>
+```
+<a href="https://cs50.harvard.edu/x/2024/">This is CS50</a>
+
+This is how we structure an element:
+```html
+<tag attribute=value>Content</tag>
+```
+
+### Image Elements
+!Notice that it is a self-closing tag (void element)
+```html
+<img src="url"alt="forest at sunset"/>
+```
+alt stands for alternative text description
+
+Example:
+<img src="https://picsum.photos/180" alt="forest at sunset"/>
+
+## ***Day 43.***
