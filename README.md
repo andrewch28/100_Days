@@ -933,3 +933,54 @@ Paragraph 2
 ```html
 <br /> //breaks sentence into diffrent lines
 ```
+## ***Day 42. Web Foundation - Intermediate HTML.***
+### HTML Boilerplate:
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Website</title>  
+    </head>
+
+    <body>
+        <h1>Hello World</h1>
+    </body>
+</html>
+```
+
+**Lifehack!**
+
+If you open ```index.html``` in VsCode and type ```!``` and then press enter - boilerplate will appear automatically
+
+### The list Elements
+
+**1. Unordered List**
+```html
+<ul>
+    <li>Milk</li>
+    <li>Eggs</li>
+    <li>Flour</li>
+</ul>
+```
+This is how it actually looks
+<ul>
+    <li>Milk</li>
+    <li>Eggs</li>
+    <li>Flour</li>
+</ul>
+
+**2. Ordered List**
+```html
+<ol>
+    <li>Milk</li>
+    <li>Eggs</li>
+    <li>Flour</li>
+</ol>
+```
+This is how it actually looks
+<ol>
+    <li>Milk</li>
+    <li>Eggs</li>
+    <li>Flour</li>
+</ol>
