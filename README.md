@@ -1041,7 +1041,6 @@ There are three ways to add CSS into a file:
 <tag style="css"/>
 ```
 - internal
-
 **Selector** is an item before ```{```
 ```html
 <html>
@@ -1052,7 +1051,80 @@ There are three ways to add CSS into a file:
     </head>
 </html>
 ```
+it is a convention to use an internal style sheet in the head
+
 - external
 ```html
 <link rel="stylesheet" href="style.css"/>
 ```
+
+### Selectors
+***Element Selector***
+
+We have a property called **color**, value **blue** and css selector - **h1**
+```css
+h1 {
+  color: blue;
+}
+```
+***Class Selector***
+```html
+<h2 class="red-text">Red</h2>
+<h2>Green</h2>
+<h2>Blue</h2>
+```
+
+```css
+.red-text {
+  color: red;
+}
+```
+***Id Selector***
+```html
+<p id="main">Red</p>
+<p>Green</p>
+<p>Blue</p>
+```
+
+```css
+#main {
+  color: red;
+}
+```
+The difference is that **class selector** can be applied to many elements while the **id selector** should be applied to only one.
+
+***Attribue Selector***
+
+Select all paragraph elements with the attribute draggable and then apply this css to it
+```html
+<p draggable="true">Drag me</p>
+<p>Don't drag me</p>
+<p>Don't drag me</p>
+```
+```css
+p[draggable] {
+  color: red;
+}
+```
+We can even go further and select only paragraph elements which have certain attributes with certain values
+
+```html
+<p draggable="true">Drag me</p>
+<p draggable="false">Don't drag me</p>
+<p draggable="false">Don't drag me</p>
+```
+```css
+p[draggable="false"] {
+  color: red;
+}
+```
+***Universal Selector***
+
+css will be applied to everything
+```css
+* {
+  color: red;
+}
+```
+
+## ***Day 44.***
