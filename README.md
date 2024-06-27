@@ -1032,4 +1032,27 @@ alt stands for alternative text description
 Example:
 <img src="https://picsum.photos/180" alt="forest at sunset"/>
 
-## ***Day 43.***
+## ***Day 43. CSS.***
+CSS stands for **Cascading Style Sheets**
+
+There are three ways to add CSS into a file:
+- inline
+```html
+<tag style="css"/>
+```
+- internal
+
+**Selector** is an item before ```{```
+```html
+<html>
+    <head>
+        html{    
+          background: red;
+        }
+    </head>
+</html>
+```
+- external
+```html
+<link rel="stylesheet" href="style.css"/>
+```
