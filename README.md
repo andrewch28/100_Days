@@ -1127,4 +1127,38 @@ css will be applied to everything
 }
 ```
 
-## ***Day 44.***
+## ***Day 44. Intermediate CSS***
+### Color Properties
+```css
+html {
+  background-color: red;
+}
+
+h1 {
+  color: blue;
+}
+```
+<a href="https://colorhunt.co/">This is a website with cool colors</a>
+
+### Font Properties
+
+```css
+h1 {
+  color: blue;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: sans;
+}
+```
+***font-sizes***
+- 1px (1/96th inch)
+- 1pt (1/72nd int)
+- 1em (100% of parent)
+- 1rem (100% of root)
+
+***text align***
+```css
+h1{
+  text-align: center;
+}
+```
