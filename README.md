@@ -1162,3 +1162,37 @@ h1{
   text-align: center;
 }
 ```
+### The Box Model - Margin, Padding and Border
+
+border takes thickness, style and a color
+```css
+border: 10px solid black;
+```
+
+```css
+border: 10px solid black;
+    border-top: 0px;
+```
+
+It first sets the up, then rigth, then bottom, then left
+```css
+border: 10px solid black;
+border-width: 0px 10px 20px 30px;
+```
+
+Padding is for inside the border
+```css
+padding: 20px;
+```
+
+Margin is for the outside of border
+```css
+margin: 10px;
+```
+
+### Content Division Element
+```html
+<div>
+    ...
+</div>
+```
